@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css"> <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <title>Club Members</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px 15px;
+            color: #633c4c;
+            background: #fce4ec url("https://i.pinimg.com/736x/b0/be/a9/b0bea9cd2ce4d48c25c5f844a22a7dc8.jpg") center / cover fixed;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+        }
+
+        h1, h2 {
+            color: #c05280;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            display: block;
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #e5a9c2;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 10px 16px;
+            background: #d96b98;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #bd4f7e;
+        }
+
+        .section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff7fa;
+            border-radius: 8px;
+        }
+
+        #output {
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Club Member Manager</h1>
+
+        <div class="section">
+            <h2>Add a Member</h2>
+
+            <input type="text" id="first_name" placeholder="First name">
+            <input type="text" id="last_name" placeholder="Last name">
+
+            <button type="button" py-click="add_member">Add Member</button>
+        </div>
+
+        <div class="section">
+            <h2>Members and Set Results</h2>
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <script type="py" src="./main.py"></script>
+</body>
+</html>
